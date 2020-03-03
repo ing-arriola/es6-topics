@@ -73,3 +73,12 @@ console.log(uno)
 
 let {credits:[one]}=customer
 console.log(one)
+
+//function with default values
+//With the addition of {} in the parameter of the object it is possible 
+//get only one parameter from the user
+function reservation(complete,{paid='cash',amount=0}={}){
+    console.log(`amount is:${amount}`)
+}
+
+reservation(true)

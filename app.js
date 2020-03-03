@@ -49,3 +49,27 @@ console.log(`city 1 is: ${city1} and city 2 is: ${city2}`)
 //the city at a specific position where you write the name of the variable that you want
 let [,,specificCity,]=cities
 console.log(specificCity)
+
+//Getting data from an array inside a object ... inside another object :)
+
+let customer={
+    type:'premium',
+    credit:5000,
+    data:{
+        name:'peter',
+        surname:'clark',
+        location:{
+            city:'Texas'
+        },
+        movements:['12-2-2019','23-10-2018','14-08-2017']
+
+    },
+    credits:['tv','house','car']
+}
+
+let {type,credit,data}=customer
+let [,uno,]=data.movements
+console.log(uno)
+
+let {credits:[one]}=customer
+console.log(one)

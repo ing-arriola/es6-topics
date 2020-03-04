@@ -82,3 +82,20 @@ function reservation(complete,{paid='cash',amount=0}={}){
 }
 
 reservation(true)
+
+//Regular expressions (RE)
+//Declaring a RE for numbers
+let reg=/0-9/
+let reg2=/a-z/
+//To check a date
+let reg3=/\d\d-\d\d-\d\d\d\d/ //So in this example the date could be DD-MM-YYYY or MM-DD-YYYY
+let reg4=/\d\d-\D\D\D-\d\d\d\d/ //But in this case it has to be DD-MMM-YYYY to make sense
+console.log(reg.test('a'))
+console.log(reg2.test('A'))
+console.log(reg3.test('15-10-2019'))
+console.log(reg3.test('hola mundo'))
+console.log('Esta es la ExpReg4: '+reg4.test('12-JAN-2020'))
+
+//checkin numbers or letters in a string
+let regNumLet=/\w+/
+console.log(regNumLet.test('3st4 3s 1 C4d3na c0n Num3r0s y leTr4s'))//As you can see this RegExp allows the blanks spaces :(
